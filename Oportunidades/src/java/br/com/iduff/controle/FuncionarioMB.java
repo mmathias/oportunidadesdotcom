@@ -10,12 +10,12 @@ package br.com.iduff.controle;
  * and open the template in the editor.
  */
 
-import br.com.iduff.DAO.DaoFactory;
-import br.com.iduff.DAO.FuncionarioDao;
-import br.com.iduff.modelo.Endereco;
-import br.com.iduff.modelo.Funcionario;
-import br.com.iduff.modelo.Funcionario.Tipo;
-import br.com.iduff.modelo.Telefone;
+import br.com.oportunidades.DAO.DaoFactory;
+import br.com.oportunidades.DAO.FuncionarioDao;
+import br.com.oportunidades.modelo.Endereco;
+import br.com.oportunidades.modelo.Funcionario;
+import br.com.oportunidades.modelo.Funcionario.Tipo;
+import br.com.oportunidades.modelo.Telefone;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.model.ListDataModel;

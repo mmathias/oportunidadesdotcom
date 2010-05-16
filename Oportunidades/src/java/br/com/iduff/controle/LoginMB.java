@@ -5,8 +5,8 @@
 
 package br.com.iduff.controle;
 
-import br.com.iduff.modelo.Pessoa;
-import br.com.iduff.service.LoginService;
+import br.com.oportunidades.modelo.Pessoa;
+import br.com.oportunidades.service.LoginService;
 import javax.faces.model.ListDataModel;
 
 /**

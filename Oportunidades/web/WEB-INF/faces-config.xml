@@ -9,7 +9,7 @@
     <managed-bean>
 
         <managed-bean-name>PrincipalLogin</managed-bean-name>
-        <managed-bean-class>Controladores.PrincipalLogin</managed-bean-class>
+        <managed-bean-class>br.com.oportunidades.controle.LoginMB</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
 
     </managed-bean>
@@ -17,7 +17,7 @@
     <managed-bean>
 
         <managed-bean-name>PrincipalFuncionario</managed-bean-name>
-        <managed-bean-class>Controladores.PrincipalFuncionario</managed-bean-class>
+        <managed-bean-class>br.com.oportunidades.controle.FuncionarioMB</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
 
     </managed-bean>
@@ -25,17 +25,17 @@
     <managed-bean>
 
         <managed-bean-name>SessaoDoUsuario</managed-bean-name>
-        <managed-bean-class>Controladores.SessaoDoUsuario</managed-bean-class>
+        <managed-bean-class>br.com.oportunidades.controle.SessaoDoUsuario</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
 
     </managed-bean>
 
-
+<!--
     <application>
         <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
         <navigation-handler>NavegacaoHandler.NavegacaoHandler</navigation-handler>
     </application>
-
+-->
     
 </faces-config>
 

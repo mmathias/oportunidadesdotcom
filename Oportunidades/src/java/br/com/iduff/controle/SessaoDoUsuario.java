@@ -4,9 +4,9 @@
  */
 package br.com.iduff.controle;
 
-import br.com.iduff.DAO.DaoFactory;
-import br.com.iduff.DAO.FuncionarioDao;
-import br.com.iduff.modelo.Funcionario;
+import br.com.oportunidades.DAO.DaoFactory;
+import br.com.oportunidades.DAO.FuncionarioDao;
+import br.com.oportunidades.modelo.Funcionario;
 
 
 /**
