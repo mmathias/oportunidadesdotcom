@@ -5,7 +5,7 @@
 
 package br.com.oportunidades.service;
 
-import br.com.oportunidades.DAO.PessoaDAO;
+import br.com.oportunidades.dao.PessoaDAO;
 import br.com.oportunidades.modelo.Pessoa;
 import javax.faces.model.ListDataModel;
 
