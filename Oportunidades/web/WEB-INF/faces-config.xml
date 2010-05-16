@@ -29,13 +29,6 @@
         <managed-bean-scope>session</managed-bean-scope>
 
     </managed-bean>
-
-<!--
-    <application>
-        <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
-        <navigation-handler>NavegacaoHandler.NavegacaoHandler</navigation-handler>
-    </application>
--->
     
 </faces-config>
 
