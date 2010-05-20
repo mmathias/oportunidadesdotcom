@@ -7,5 +7,41 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
 
+    <managed-bean>
+
+        <managed-bean-name>PrincipalLogin</managed-bean-name>
+        <managed-bean-class>br.com.oportunidades.controle.PrincipalLogin</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+
+    </managed-bean>
+
+    <managed-bean>
+
+        <managed-bean-name>FuncionarioMB</managed-bean-name>
+        <managed-bean-class>br.com.oportunidades.controle.FuncionarioMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+
+    </managed-bean>
+
+
+    <managed-bean>
+
+        <managed-bean-name>LoginMB</managed-bean-name>
+        <managed-bean-class>br.com.oportunidades.controle.LoginMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+
+    </managed-bean>
+
+    <managed-bean>
+
+        <managed-bean-name>SessaoDoUsuario</managed-bean-name>
+        <managed-bean-class>br.com.oportunidades.controle.SessaoDoUsuario</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+
+    </managed-bean>
+
+<application>
+    <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+</application>
 
 </faces-config>
