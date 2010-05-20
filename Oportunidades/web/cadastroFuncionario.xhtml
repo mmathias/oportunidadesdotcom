@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Cadastrar Funcionario</title>
+    </head>
+    <body>
+
+        <ui:composition template="template.xhtml">
+            <ui:define name="conteudo">
+                <h:commandLink value="Alterar senha" action="#{PrincipalFuncionario.paginaAlterarSenha}" rendered="#{!PrincipalFuncionario.novoFuncionario}" />
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Nome: " for="nome" />
+                    <h:inputText   id="nome" value="#{PrincipalFuncionario.funcionarioCorrente.nome}" />
+
+                    <h:outputLabel for="comboTipo" value="Especificacao" />
+                    <h:selectOneMenu id="comboTipo" value="#{PrincipalFuncionario.tipoFunc}">
+                        <f:selectItems value="#{PrincipalFuncionario.comboTipoFunc}" />
+                    </h:selectOneMenu>
+
+                    <h:outputText value="Usuario: " />
+                    <h:inputText value="#{PrincipalFuncionario.funcionarioCorrente.usuario}" />
+
+                    <h:outputText value="Senha: " rendered="#{PrincipalFuncionario.novoFuncionario}"/>
+                    <h:inputSecret value="#{PrincipalFuncionario.funcionarioCorrente.senha}" rendered="#{PrincipalFuncionario.novoFuncionario}"/>
+
+                    <h:outputText value="Confirmar senha: " rendered="#{PrincipalFuncionario.novoFuncionario}"/>
+                    <h:inputSecret value="#{PrincipalFuncionario.confirmarSenha}" rendered="#{PrincipalFuncionario.novoFuncionario}"/>
+
+                    <h:outputLabel value="*CPF: " for="cpf"/>
+                    <h:inputText   id="cpf" value="#{PrincipalFuncionario.funcionarioCorrente.CPF}" />
+
+                    <h:outputLabel value="*Matrícula: " for="matricula"/>
+                    <h:inputText   id="matricula" value="#{PrincipalFuncionario.funcionarioCorrente.matricula}" />
+
+                    <h:outputLabel value="*Identidade: " for="identidade" />
+                    <h:inputText id="identidade" value="#{PrincipalFuncionario.funcionarioCorrente.identidade}"/>
+
+                    <h:outputLabel value="PIS: " for="pis" />
+                    <h:inputText id="pis" value="#{PrincipalFuncionario.funcionarioCorrente.pis}" />
+
+                </h:panelGrid>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <h:panelGrid columns="2">
+
+                        <h:outputLabel value="Rua: " for="rua" />
+                        <h:inputText id="rua" value="#{PrincipalFuncionario.funcionarioCorrente.endereco.rua}" />
+
+                        <h:outputLabel value="Número: " for="numero" />
+                        <h:inputText id="numero" value="#{PrincipalFuncionario.funcionarioCorrente.endereco.numero}" />
+
+                        <h:outputLabel value="CEP: " for="cep" />
+                        <h:inputText id="cep" value="#{PrincipalFuncionario.funcionarioCorrente.endereco.cep}" />
+
+                    </h:panelGrid>
+                </fieldset>
+
+                <h:panelGrid columns="2">
+
+                    <h:outputLabel value="Telefone comercial: " for="telCom" />
+                    <h:inputText id="telCom" value="#{PrincipalFuncionario.funcionarioCorrente.telefones.comercial}" />
+
+                    <h:outputLabel value="Telefone residencial: " for="telRes" />
+                    <h:inputText id="telRes" value="#{PrincipalFuncionario.funcionarioCorrente.telefones.residencial}" />
+
+                    <h:outputLabel value="Celular: " for="cel" />
+                    <h:inputText id="cel" value="#{PrincipalFuncionario.funcionarioCorrente.telefones.celular}" />
+
+                    <h:outputLabel value="Data Nascimento: " for="dataNascimento" />
+                    <h:inputText id="dataNascimento" value="#{PrincipalFuncionario.funcionarioCorrente.dataNascimento}" />
+
+                    <h:outputLabel value="Carteira de Trabalho:  " for="carteiraTrabalho" />
+                    <h:inputText id="carteiraTrabalho" value="#{PrincipalFuncionario.funcionarioCorrente.carteiraTrabalho}" />
+
+                    <h:outputLabel value="Título de eleitor:  " for="tituloEleitor" />
+                    <h:inputText id="tituloEleitor" value="#{PrincipalFuncionario.funcionarioCorrente.tituloEleitor}" >
+                        <f:convertDateTime pattern="dd/MM/yyyy" />
+                    </h:inputText>
+
+
+                    <h:outputLabel value="Função Exercida:  " for="funcaoExercida" />
+                    <h:inputText id="funcaoExercida" value="#{PrincipalFuncionario.funcionarioCorrente.funcaoExercida}" />
+
+                    <h:outputLabel value="Local de trabalho:  " for="localTrabalho" />
+                    <h:inputText id="localTrabalho" value="#{PrincipalFuncionario.funcionarioCorrente.localTrabalho}" />
+
+                    <h:outputLabel value="Sindicato:  " for="sindicato" />
+                    <h:inputText id="sindicato" value="#{PrincipalFuncionario.funcionarioCorrente.sindicato}" />
+
+                    <h:outputLabel value="Horas por dia:  " for="horaPorDia" />
+                    <h:inputText id="horaPorDia" value="#{PrincipalFuncionario.funcionarioCorrente.horaPorDia}" >
+                        <f:convertNumber integerOnly="true" />
+                    </h:inputText>
+
+                </h:panelGrid>
+                <h:commandButton value="Cadastrar" action="#{PrincipalFuncionario.cadastrarFuncionario}" />
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>
