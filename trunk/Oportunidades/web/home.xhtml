@@ -13,36 +13,34 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Página Inicial</title>
     </head>
-    <body>
-        <ui:composition template="template.xhtml">
-            <ui:define name="conteudo">
-                <h:panelGrid columns="2">
-                    <h:outputText value="#{SessaoDoUsuario.funcionarioLogado.nome}" />
-                </h:panelGrid>
-                <h:commandLink value="Listar todos os funcionários" action="#{PrincipalFuncionario.listarTodos}" rendered="#{PrincipalFuncionario.listaFuncionarios == null || SessaoDoUsuario.rh}" />
-                <h:dataTable var="funcionario" value="#{PrincipalFuncionario.listaFuncionarios}" rendered="#{PrincipalFuncionario.listaFuncionarios != null}" >
-                    <h:column>
-                        <f:facet name="header">Nome</f:facet>
-                        <h:outputText value="#{funcionario.nome}" />
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">CPF</f:facet>
-                        <h:outputText value="#{funcionario.CPF}" />
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Matrícula</f:facet>
-                        <h:outputText value="#{funcionario.matricula}" />
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Especificacao</f:facet>
-                        <h:outputText value="#{funcionario.especificacao}" />
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Alterar</f:facet>
-                        <h:commandLink action="#{PrincipalFuncionario.paginaAlterarDados}" value="Alterar" />
-                    </h:column>
-                </h:dataTable>
-            </ui:define>
-        </ui:composition>
-    </body>
+    <ui:composition template="template.xhtml">
+        <ui:define name="conteudo">
+            <h:panelGrid columns="2">
+                <h:outputText value="#{SessaoDoUsuario.funcionarioLogado.nome}" />
+            </h:panelGrid>
+            <h:commandLink value="Listar todos os funcionários" action="#{PrincipalFuncionario.listarTodos}" rendered="#{PrincipalFuncionario.listaFuncionarios == null || SessaoDoUsuario.rh}" />
+            <h:dataTable var="funcionario" value="#{PrincipalFuncionario.listaFuncionarios}" rendered="#{PrincipalFuncionario.listaFuncionarios != null}" >
+                <h:column>
+                    <f:facet name="header">Nome</f:facet>
+                    <h:outputText value="#{funcionario.nome}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">CPF</f:facet>
+                    <h:outputText value="#{funcionario.CPF}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Matrícula</f:facet>
+                    <h:outputText value="#{funcionario.matricula}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Especificacao</f:facet>
+                    <h:outputText value="#{funcionario.especificacao}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Alterar</f:facet>
+                    <h:commandLink action="#{PrincipalFuncionario.paginaAlterarDados}" value="Alterar" />
+                </h:column>
+            </h:dataTable>
+        </ui:define>
+    </ui:composition>
 </html>

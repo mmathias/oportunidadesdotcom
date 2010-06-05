@@ -1,0 +1,106 @@
+body {
+    color: #000;
+    font: 12px Verdana, sans-serif;
+}
+
+input {
+
+    text-align: left;
+    position: static;
+    left: 8px;
+}
+label {
+    float: left;
+    width: 10em;
+    text-align: left;
+    text-indent: 2px;
+    background-position: left;
+}
+fieldset {
+    padding: 0 1em 1em 1em;
+    text-align: left;
+    text-indent: 2px;
+}
+
+#cabecalho {
+    width: 90%;
+    font-weight: bold;
+    color: silver;
+    background-color: #F5F5F5;
+    text-align: left;
+    vertical-align: middle;
+    text-indent: 2px;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    border-top-style: hidden;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: static;
+    background-position: center center;
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#cabecalho h1 {
+
+    color: #666;
+    font-family: Arial,Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    font-variant: normal;
+    background-position: left bottom;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+#conteudo {
+    width: 75%;
+    float: right;
+    
+}
+
+#menu {
+    width: 15%;
+    margin: 0; padding: 0;
+    float: left;
+}
+
+#menu ul li {
+    margin: 0; padding: 0px;
+    border-bottom: 1px solid #CCC;
+    text-align: left;
+    list-style-type: none;
+}
+
+#menu a:link {
+    background: #F5F5F5;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+#menu a:visited {
+    background: #F5F5F5;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+#menu a:hover {
+    background: #E5F0FF;
+    color: #039;
+}
