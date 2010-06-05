@@ -5,85 +5,40 @@
 
 package br.com.oportunidades.modelo;
 
-import java.io.Serializable;
 import java.util.Calendar;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
 
 /**
  *
- * @author Mathias
+ * @author user
  */
-@Entity
-public class Experiencia implements Serializable {
+public class Experiencia {
 
-    @Id
-    private int id;
+    private Calendar dataInicio;
+    private Calendar dataFim;
+    private String nome;
 
-    private String empregador;
-    private String cargo;
+    public Calendar getDataFim() {
+        return dataFim;
+    }
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Calendar dtInicio;
+    public void setDataFim(Calendar dataFim) {
+        this.dataFim = dataFim;
+    }
+
+    public Calendar getDataInicio() {
+        return dataInicio;
+    }
+
+    public void setDataInicio(Calendar dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     
-    @Temporal(TemporalType.TIMESTAMP)
-    private Calendar dtFim;
-
-    private String atividades;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getAtividades() {
-        return atividades;
-    }
-
-    public void setAtividades(String atividades) {
-        this.atividades = atividades;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
-    public Calendar getDtFim() {
-        return dtFim;
-    }
-
-    public void setDtFim(Calendar dtFim) {
-        this.dtFim = dtFim;
-    }
-
-    public Calendar getDtInicio() {
-        return dtInicio;
-    }
-
-    public void setDtInicio(Calendar dtInicio) {
-        this.dtInicio = dtInicio;
-    }
-
-    public String getEmpregador() {
-        return empregador;
-    }
-
-    public void setEmpregador(String empregador) {
-        this.empregador = empregador;
-    }
-
-
-
-
-
 }

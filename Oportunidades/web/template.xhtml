@@ -5,27 +5,25 @@
       xmlns:h="http://java.sun.com/jsf/html">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-        <link href="./estilo.css" rel="stylesheet" type="text/css" />
-        <title>Espaco Colaborador</title>
+        <link href="./css/estilo.css" rel="stylesheet" type="text/css" />
+        <title>Oportunidades.com</title>
     </head>
 
     <body>
         <div id="cabecalho" class="cabecalho">
-            <h1>Espaco Colaborador</h1>
+            <h1>Oportunidades.com</h1>
         </div>
         <h:form id="formPrincipal">
             <div>
                 <div id="menu" class="menu">
                     <ul>
-                        <li><h:commandLink value="Efetuar Login" action="#{PrincipalLogin.paginaLogin}"  rendered="#{SessaoDoUsuario.funcionarioLogado == null}" /></li>
-                        <li><h:commandLink value="Cadastrar Funcionário" action="#{PrincipalFuncionario.paginaCadastrarFuncionario}" rendered="#{SessaoDoUsuario.funcionarioLogado != null || SessaoDoUsuario.rh}"/></li>
-                        <li><a href="cadastrarCurriculo.html">Cadastrar Curriculo</a></li>
-                        <li><a href="alterarCurriculo.html">Alterar Curriculo</a></li>
-                        <li><a href="gerarOportunidades.html">Gerar Oportunidades</a></li>
+                        <li><a href="logarUsuario.xhtml">Logar Usuario</a></li>
+                        <li><a href="cadastrarCurriculo.xhtml">Cadastrar Curriculo</a></li>
+                        <li><a href="cadastrarFuncionario.xhtml">Cadastrar Curriculo</a></li>
                     </ul>
                 </div>
                 <div id="conteudo" class="conteudo">
-                    <ui:insert name="conteudo">Conteudo</ui:insert>
+                    <ui:insert name="conteudo"></ui:insert>
                 </div>
             </div>
         </h:form>

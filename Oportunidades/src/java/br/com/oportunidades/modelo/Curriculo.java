@@ -2,65 +2,59 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.oportunidades.modelo;
 
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import java.util.List;
 
 /**
  *
- * @author Mathias
+ * @author user
  */
+public class Curriculo {
 
-@Entity
-public class Curriculo implements Serializable {
+    private List<Experiencia> experiencias;
+    private List<InfoBasica> infoBasicas;
+    private Candidato candidato;
 
-    @Id
-    private int id;
-
-    @ManyToOne
-    private Experiencia experiencia;
-    @ManyToOne
-    private Escolaridade escolaridade;
-    @ManyToOne
-    private Idioma idioma;
-
-
-    public int getId() {
-        return id;
+    /**
+     * @return the experiencias
+     */
+    public List<Experiencia> getExperiencias() {
+        return experiencias;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    /**
+     * @param experiencias the experiencias to set
+     */
+    public void setExperiencias(List<Experiencia> experiencias) {
+        this.experiencias = experiencias;
     }
 
-    public Escolaridade getEscolaridade() {
-        return escolaridade;
+    /**
+     * @return the infoBasicas
+     */
+    public List<InfoBasica> getInfoBasicas() {
+        return infoBasicas;
     }
 
-    public void setEscolaridade(Escolaridade escolaridade) {
-        this.escolaridade = escolaridade;
+    /**
+     * @param infoBasicas the infoBasicas to set
+     */
+    public void setInfoBasicas(List<InfoBasica> infoBasicas) {
+        this.infoBasicas = infoBasicas;
     }
 
-    public Experiencia getExperiencia() {
-        return experiencia;
+    /**
+     * @return the candidato
+     */
+    public Candidato getCandidato() {
+        return candidato;
     }
 
-    public void setExperiencia(Experiencia experiencia) {
-        this.experiencia = experiencia;
+    /**
+     * @param candidato the candidato to set
+     */
+    public void setCandidato(Candidato candidato) {
+        this.candidato = candidato;
     }
-
-    public Idioma getIdioma() {
-        return idioma;
-    }
-
-    public void setIdioma(Idioma idioma) {
-        this.idioma = idioma;
-    }
-
-    
-
 }
