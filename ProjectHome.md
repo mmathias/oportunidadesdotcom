@@ -1,0 +1,1 @@
+A principal função do sitema se baseia no fornecimento de soluções de gestão online de recrutamento de empregados, dando às empresas de todos os segmentos de mercado uma vantagem competitiva através da contratação de empregados com perfis compatíveis com as vagas, mais rápido e com menor custo.
